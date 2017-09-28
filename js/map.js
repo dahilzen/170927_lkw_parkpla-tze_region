@@ -94,18 +94,61 @@ function main() {
     a6marker();
     a81marker();
 
+    console.log(L.Icon.Default.prototype.options);
+
+    // Icons erstellen
+
+    var redIcon = L.icon({
+        iconAnchor: [12, 41],
+        iconSize: [25, 41],
+        iconUrl: "css/images/marker-icon_red.png",
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41],
+        shadowUrl: "css/images/marker-shadow.png"
+    });
+
+    var blueIcon = L.icon({
+        iconAnchor: [12, 41],
+        iconSize: [25, 41],
+        iconUrl: "css/images/marker-icon.png",
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41],
+        shadowUrl: "css/images/marker-shadow.png"
+    });
+
     // Layer erstellen
-    function onEachFeature(feature, rast) {
-        rast.on('click', function(e) {
-            document.getElementById("info").innerHTML = "<b>" + feature.properties.Name + "</b><br><span style='font-weight: 600; font-size: 200%'> " + feature.properties.plaetze + "</span>" + "<br>Parkplätze für LKW"
+
+    var clickedMarker;
+
+    function onEachFeature(feature, layer) {
+        layer.on('click', function(e) {
+            document.getElementById("info").innerHTML = "<b>" + feature.properties.Name + "</b><br><span style='font-weight: 600; font-size: 200%'> " + feature.properties.plaetze + "</span>" + "<br>Parkplätze für LKW";
+            if (clickedMarker) {
+                clickedMarker.setIcon(blueIcon);
+            }
+            var layer = e.target;
+            e.target.setIcon(redIcon);
+            clickedMarker = e.target;
+
+            // e.target.setIcon(redIcon)
         });
     }
 
     var marker1 = L.geoJson(a6, {
-        onEachFeature: onEachFeature
+        pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+                riseOnHover: true,
+            });
+        },
+        onEachFeature: onEachFeature,
     }).addTo(map);
     var marker2 = L.geoJson(a81, {
-        onEachFeature: onEachFeature
+        pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+                riseOnHover: true
+            });
+        },
+        onEachFeature: onEachFeature,
     }).addTo(map);
 
     // Events für die Buttons festlegen, Zoom in die unterschiedlichen Himmelsrichtungen
