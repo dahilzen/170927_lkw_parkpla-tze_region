@@ -1,3 +1,4 @@
+// Zentrum der Karte je nach Ausgabegerät festlegen
 function setInitialMapCenter() {
 
     var viewportWidth = window.innerWidth;
@@ -10,6 +11,7 @@ function setInitialMapCenter() {
     return center;
 };
 
+//Standardzoom der Karte je nach Ausgabegerät festlegen
 function setInitialZoom() {
     var viewportWidth = window.innerWidth;
     var initZoom;
@@ -21,6 +23,7 @@ function setInitialZoom() {
     return initZoom;
 };
 
+// Die eigentliche Karte initialisieren
 function main() {
 
     // Optionen der Karten festlegen
@@ -97,7 +100,6 @@ function main() {
     console.log(L.Icon.Default.prototype.options);
 
     // Icons erstellen
-
     var redIcon = L.icon({
         iconAnchor: [12, 41],
         iconSize: [25, 41],
@@ -116,8 +118,9 @@ function main() {
         shadowUrl: "css/images/marker-shadow.png"
     });
 
-    // Layer erstellen
-
+    // Layer erstellen und anweisen, das Popup in den Div-Container info zu schreiben. 
+    // Außerdem soll bei einem Mausklick der Marker ausgetauscht werden. 
+    // Bei Klick auf einen anderen Marker soll wieder der alte Marker gezeigt werden
     var clickedMarker;
 
     function onEachFeature(feature, layer) {
@@ -126,11 +129,8 @@ function main() {
             if (clickedMarker) {
                 clickedMarker.setIcon(blueIcon);
             }
-            var layer = e.target;
             e.target.setIcon(redIcon);
             clickedMarker = e.target;
-
-            // e.target.setIcon(redIcon)
         });
     }
 
@@ -150,6 +150,14 @@ function main() {
         },
         onEachFeature: onEachFeature,
     }).addTo(map);
+
+    // Tooltip bei Mouse-Over erstellen
+    marker1.bindTooltip(function(layer) {
+        return layer.feature.properties.Name;
+    });
+    marker2.bindTooltip(function(layer) {
+        return layer.feature.properties.Name;
+    });
 
     // Events für die Buttons festlegen, Zoom in die unterschiedlichen Himmelsrichtungen
     var zoomToWest = function() {
