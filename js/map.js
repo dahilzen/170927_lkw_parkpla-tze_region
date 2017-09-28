@@ -155,6 +155,7 @@ function main() {
     marker1.bindTooltip(function(layer) {
         return layer.feature.properties.Name;
     });
+
     marker2.bindTooltip(function(layer) {
         return layer.feature.properties.Name;
     });
