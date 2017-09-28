@@ -1,0 +1,44 @@
+type,autobahn,Art,Name,plaetze,geotype,lon,lat
+Feature,A6,Rasthof,Kraichgau Nord,24,Point,8.8762299,49.2429788
+Feature,A6,Rasthof,Kraichgau Süd,24,Point,8.8776658,49.2413913
+Feature,A6,Autohof,Kolb,110,Point,8.893271,49.242002
+Feature,A6,Rastplatz,Bauernwald Süd,12,Point,8.971478,49.221648
+Feature,A6,Rastplatz,Bauernwald Nord,9,Point,8.975493,49.222247
+Feature,A6,Autohof,Bad Rappenau,25,Point,9.077613,49.212131
+Feature,A6,Autohof,Bad Rappenau,110,Point,9.06992,49.21082
+Feature,A6,Rastplatz,Eichhäuser Hof,5,Point,9.099045,49.196855
+Feature,A6,Rastplatz,Wart,5,Point,9.10642,49.193717
+Feature,A6,Rastplatz,Sulmtal Süd,6,Point,9.253593,49.169195
+Feature,A6,Rastplatz,Sulmtal Nord,6,Point,9.258947,49.168012
+Feature,A6,Rastplatz,Rosenberg,6,Point,9.316202,49.156876
+Feature,A6,Rastplatz,Wimmental Nord,6,Point,9.340459,49.161748
+Feature,A6,Rastplatz,Gagernberg Süd,6,Point,9.370028,49.162368
+Feature,A6,Rastplatz,Galgenberg Nord,6,Point,9.400972,49.176452
+Feature,A6,Rastplatz,Sommerhalden,33,Point,9.42985,49.19447
+Feature,A6,Rastplatz,Öhringen,5,Point,9.471549,49.204231
+Feature,A6,Rastplatz,Weinsbach Nord,5,Point,9.532486,49.211656
+Feature,A6,Rastplatz,Weinsbach Süd,5,Point,9.53588,49.211281
+Feature,A6,Rasthof,Hohenlohe Süd,34,Point,9.6396202,49.205355
+Feature,A6,Rasthof,Hohenlohe Nord,103,Point,9.639837,49.207372
+Feature,A6,Rastplatz,Kochertalbrücke Süd,25,Point,9.794582,49.174384
+Feature,A6,Rastplatz,Kochertalbrücke Nord,36,Point,9.796968,49.17635
+Feature,A81,Rastplatz,Holzspitze Ost,11,Point,9.531039,49.453577
+Feature,A81,Rastplatz,Holzspitze West,11,Point,9.532926,49.456234
+Feature,A81,Rastplatz,Seegrund,5,Point,9.503767,49.432243
+Feature,A81,Rastplatz,Denzer,4,Point,9.459739,49.380095
+Feature,A81,Rastplatz,Limes,7,Point,9.453305,49.374999
+Feature,A81,Rastplatz,Großer Wald,7,Point,9.426552,49.363351
+Feature,A81,Rastplatz,Volkshausen,0,Point,9.41825,49.357677
+Feature,A81,Rasthof,Jagsttal,25,Point,9.414584,49.3233781
+Feature,A81,Rasthof,Jagsttal,26,Point,9.412845,49.325673
+Feature,A81,Rastplatz,Egerten,0,Point,9.351428,49.27243
+Feature,A81,Rastplatz,Hegteil,5,Point,9.353949,49.260749
+Feature,A81,Rastplatz,Sulzrain,5,Point,9.349561,49.197417
+Feature,A81,Rastplatz,Kiefertal,4,Point,9.351476,49.194769
+Feature,A81,Rastplatz,Eberbachtal,14,Point,9.316321,49.170553
+Feature,A81,Rastplatz,Reisberg,5,Point,9.299935,49.120573
+Feature,A81,Rastplatz,Grafenwald,5,Point,9.293241,49.092396
+Feature,A81,Rasthof,Wunnenstein Ost,42,Point,9.265117,49.044731
+Feature,A81,Rasthof,Wunnenstein West,44,Point,9.263206,49.045353
+Feature,A81,Rastplatz,Kälbling Ost,5,Point,9.233208,48.992008
+Feature,A81,Rastplatz,Kälbling West,5,Point,9.231758,48.990494
