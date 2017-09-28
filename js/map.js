@@ -35,7 +35,7 @@ function main() {
         minZoom: 9,
         maxZoom: 13,
         zoomControl: false,
-        attributionControl: false,
+        attributionControl: true,
         legends: false,
         layer_selector: false,
         maxBounds: bounds,
@@ -46,7 +46,8 @@ function main() {
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         id: 'mapbox.light',
-        accessToken: "pk.eyJ1IjoiZGFoaWx6ZW4zMiIsImEiOiJjaXZ5OWwxam8wMDFqMnpxOXc4Y3l5dXd1In0.S9lbvSNNnpsOs4BXCzZoVg"
+        accessToken: "pk.eyJ1IjoiZGFoaWx6ZW4zMiIsImEiOiJjaXZ5OWwxam8wMDFqMnpxOXc4Y3l5dXd1In0.S9lbvSNNnpsOs4BXCzZoVg",
+        attribution: 'Code: <a href="https://www.twitter.com/dahilzen">David Hilzendegen</a> | Daten: <a href="https://vm.baden-wuerttemberg.de/">Verkehrsministerium BW</a>'
     }).addTo(map);
 
     function style(feature) {
