@@ -97,25 +97,23 @@ function main() {
     a6marker();
     a81marker();
 
-    console.log(L.Icon.Default.prototype.options);
-
     // Icons erstellen
-    var redIcon = L.icon({
-        iconAnchor: [12, 41],
+    var blueIcon = new L.Icon({
+        iconUrl: 'css/images/marker-icon-2x-blue.png',
+        shadowUrl: 'css/images/marker-shadow.png',
         iconSize: [25, 41],
-        iconUrl: "css/images/marker-icon_red.png",
+        iconAnchor: [12, 41],
         popupAnchor: [1, -34],
-        shadowSize: [41, 41],
-        shadowUrl: "css/images/marker-shadow.png"
+        shadowSize: [41, 41]
     });
 
-    var blueIcon = L.icon({
-        iconAnchor: [12, 41],
+    var redIcon = new L.Icon({
+        iconUrl: 'css/images/marker-icon-2x-red.png',
+        shadowUrl: 'css/images/marker-shadow.png',
         iconSize: [25, 41],
-        iconUrl: "css/images/marker-icon.png",
+        iconAnchor: [12, 41],
         popupAnchor: [1, -34],
-        shadowSize: [41, 41],
-        shadowUrl: "css/images/marker-shadow.png"
+        shadowSize: [41, 41]
     });
 
     // Layer erstellen und anweisen, das Popup in den Div-Container info zu schreiben. 
@@ -138,6 +136,7 @@ function main() {
         pointToLayer: function(feature, latlng) {
             return L.marker(latlng, {
                 riseOnHover: true,
+                icon: blueIcon,
             });
         },
         onEachFeature: onEachFeature,
@@ -145,7 +144,8 @@ function main() {
     var marker2 = L.geoJson(a81, {
         pointToLayer: function(feature, latlng) {
             return L.marker(latlng, {
-                riseOnHover: true
+                riseOnHover: true,
+                icon: blueIcon,
             });
         },
         onEachFeature: onEachFeature,
@@ -154,10 +154,16 @@ function main() {
     // Tooltip bei Mouse-Over erstellen
     marker1.bindTooltip(function(layer) {
         return layer.feature.properties.Name;
+    }, {
+        sticky: true,
+        direction: 'auto',
     });
 
     marker2.bindTooltip(function(layer) {
         return layer.feature.properties.Name;
+    }, {
+        sticky: true,
+        direction: 'auto',
     });
 
     // Events für die Buttons festlegen, Zoom in die unterschiedlichen Himmelsrichtungen
