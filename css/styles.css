@@ -6,7 +6,7 @@
 }
 
 .controlButtons {
-  position: relative;
+  position: absolute;
   z-index: 800;
   float: left;
   top: 20px;
@@ -33,12 +33,6 @@
   padding: 5px;
   z-index: 800;
   float: left;
-}
-
-@media screen and (max-width: 600px) {
-  #info {
-    max-width: 100px;
-  }
 }
 
 .myButton {
@@ -85,4 +79,21 @@
 .myButton:active {
   position: relative;
   background-color: grey;
+}
+
+.logo {
+  position: absolute;
+  max-width: 100px;
+  z-index: 800;
+  bottom: 5px;
+  left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #info {
+    max-width: 100px;
+  }
+  .logo {
+    bottom: 35px;
+  }
 }

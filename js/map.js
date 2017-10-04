@@ -46,11 +46,12 @@ function main() {
 
     // Karte und Basemap initialisieren
     var map = L.map('map', mapOptions);
+    map.attributionControl.setPrefix('');
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         id: 'mapbox.light',
         accessToken: "pk.eyJ1IjoiZGFoaWx6ZW4zMiIsImEiOiJjaXZ5OWwxam8wMDFqMnpxOXc4Y3l5dXd1In0.S9lbvSNNnpsOs4BXCzZoVg",
-        attribution: 'Code: <a href="https://www.twitter.com/dahilzen">David Hilzendegen</a> | Daten: <a href="https://vm.baden-wuerttemberg.de/">Verkehrsministerium BW</a>'
+        attribution: 'Code: <a href="https://www.twitter.com/dahilzen">David Hilzendegen</a> | Daten: <a href="https://vm.baden-wuerttemberg.de/">Verkehrsministerium BW</a> | <a href="https://github.com/dahilzen/170927_lkw_parkplaetze_region">Quellcode</a>'
     }).addTo(map);
 
     function style(feature) {
